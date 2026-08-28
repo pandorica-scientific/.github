@@ -22,20 +22,17 @@
 
 Pandorica Scientific is the home for the open-source work of
 [Robert Kiewisz](https://github.com/RRobert92) — tools for electron
-microscopy, and the software that grew out of the same habit of mind.
+microscopy and practical software for everyday problems.
 
-The projects here look unrelated at first glance: a serial-section tomogram
-stitcher, a self-hosted household finance platform, a passive sensor logger.
-The method behind them is the same one.
+The projects share a simple idea: if a task can be automated, it should be.
+They turn difficult, repetitive work into plug-and-play tools that need little
+user interaction, install easily, and do not create a maintenance burden.
 
-- **Read the raw signal, not a vendor's summary of it.** Microscope volumes,
-  the bank's own statement files, the wristband's own radio broadcast.
-- **Verify the result against something independent.** A geometric invariant,
-  the statement's own closing balance, a reading from the official app.
-- **Keep the data on hardware you control.** No cloud account is required to
-  run any of it.
-- **Say plainly what a tool cannot do.** Limitations belong in the README,
-  not in the issue tracker after someone is bitten.
+- **Automate the routine.** Let software handle the repeatable work reliably.
+- **Keep interaction minimal.** Ask for input only when a person’s judgement is genuinely needed.
+- **Make hard problems approachable.** Provide practical defaults instead of exposing unnecessary complexity.
+- **Make installation simple.** Sensible defaults work out of the box; advanced controls stay available for experts who want to fine-tune.
+- **Avoid ongoing maintenance.** Users should use the tool, not spend time managing it.
 
 <br>
 
@@ -63,13 +60,14 @@ python -m pandorica.stitch.cli <input_dir>
 
 ### 🏠 [continuum](https://github.com/pandorica-scientific/continuum) — your household's whole financial picture, on hardware you own
 
-Most personal-finance software starts by asking which bank you use. Continuum
-never does. It reads the export files your bank already gives you, works out
-their structure from the files themselves, and checks what it extracted
-against the statement's own balances before trusting a single row. From there
-it connects the money to what belongs around it — the property, the mortgage
-secured against it, the tenants, the portfolio, the payslips, the tax those
-generate — for the household as a whole rather than one person at a time.
+Most personal-finance software starts by asking which bank you use. Continuum 
+never does. It reads the export files your bank already gives you, works out 
+their structure from the files themselves, and checks what it extracted against 
+the statement's own balances before trusting a single row.
+
+It also brings household paperwork into the same system. Scan a document; built-in 
+OCR makes it searchable by what's inside.
+
 It never connects to your bank, and it runs on a machine you control.
 
 ```bash
